@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.sprite {
+  width: 660px;
+  height: 377px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sprite_img {
+  width: 11220px;
+  height: 377px;
+  background-image: url(img/spritesheet.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sprite_img2 {
+  width: 6600px;
+  height: 377px;
+  background-image: url(img/spritesheet2.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+}
+
+.ani {
+  animation: 1s steps(17) infinite slap;
+}
+
+.ani2 {
+  animation: 1s steps(10) infinite slap2;
+}
+
+@keyframes slap {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-11220px);
+  }
+}
+
+@keyframes slap2 {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-6600px);
+  }
+}
+
+.thermometer {
+  position: relative;
+  width: 150px;
+  height: 500px;
+}
+
+.red {
+  position: absolute;
+  width: 30px;
+  height: 100px;
+  background-color: #b22323;
+  bottom: 40px;
+  left: 60px;
+  transition: height 0.5s;
+}
+
+.temperature {
+  position: absolute;
+  width: 150px;
+  height: 475px;
+  bottom: 0;
+  background-image: url(img/thermometer.png);
+  background-size: contain;
+}
+
+.thermometer > p {
+  margin: 0;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 1px;
+  text-indent: 2px;
+}
+
+.button_container button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.up-click {
+  width: 149px;
+  height: 60px;
+  background-image: url(img/slap-me.png);
+  background-size: contain;
+}
+
+.up-click:hover {
+  background-image: url(img/slap-me_hover.png);
+}
+
+.down-click {
+  width: 165px;
+  height: 60px;
+  background-image: url(img/water-me.png);
+  background-size: contain;
+}
+
+.down-click:hover {
+  background-image: url(img/water-me_hover.png);
+}
+
+.reset {
+  width: 130px;
+  height: 60px;
+  background-image: url(img/reset.png);
+  background-size: contain;
+}
+
+.reset:hover {
+  background-image: url(img/reset_hover.png);
+}
