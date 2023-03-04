@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@font-face {
+  font-family: 'LeeSeoyun';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .container {
   display: flex;
@@ -89,9 +95,8 @@
 .thermometer > p {
   margin: 0;
   text-align: center;
-  font-family: 'DM Sans', sans-serif;
-  letter-spacing: 1px;
-  text-indent: 2px;
+  font-family: 'LeeSeoyun';
+  text-indent: 1px;
 }
 
 .button_container button {
@@ -101,8 +106,8 @@
 }
 
 .up-click {
-  width: 149px;
-  height: 60px;
+  width: 120px;
+  height: 45px;
   background-image: url(img/slap-me.png);
   background-size: contain;
 }
@@ -112,8 +117,8 @@
 }
 
 .down-click {
-  width: 165px;
-  height: 60px;
+  width: 135px;
+  height: 45px;
   background-image: url(img/water-me.png);
   background-size: contain;
 }
@@ -123,12 +128,30 @@
 }
 
 .reset {
-  width: 130px;
-  height: 60px;
+  width: 96px;
+  height: 45px;
   background-image: url(img/reset.png);
   background-size: contain;
 }
 
 .reset:hover {
   background-image: url(img/reset_hover.png);
+}
+
+@media (max-width: 400px) {
+  body {
+    zoom: 0.35;
+  }
+}
+
+@media (min-width: 410px) and (max-width: 600px) {
+  body {
+    zoom: 0.5;
+  }
+}
+
+@media (min-width: 610px) and (max-width: 1200px) {
+  body {
+    zoom: 0.8;
+  }
 }
